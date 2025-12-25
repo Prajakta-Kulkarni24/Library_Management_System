@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #111; /* fallback background */
+    }
+
+    /* Header */
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: #333;
+      color: #fff;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      max-width: 60px;
+      height: auto;
+    }
+
+    .library-name {
+      margin-left: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav form {
+      margin-left: 20px;
+    }
+
+    nav input {
+      padding: 5px;
+    }
+
+    /* Hero Section with Slightly Dark Overlay */
+    .hero {
+      position: relative;
+      height: 100vh;
+      text-align: center;
+      padding: 50px 20px;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Background image with mild darkening */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('Images/library.jpg') no-repeat center center/cover;
+      filter: brightness(0.9); /* ✅ less dark (70% brightness) */
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero h3 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    /* Quotes */
+    .quotes-container {
+      margin-top: 30px;
+    }
+
+    blockquote {
+      margin: 15px auto;
+      max-width: 600px;
+      font-style: italic;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    /* Footer */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+    }
+
+    .quick-links ul {
+      list-style: none;
+    }
+
+    .quick-links li {
+      margin: 5px 0;
+    }
+
+    .quick-links a {
+     color: #fff;
+     text-decoration: none;
+    } 
+
+    .social-icons a {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* 📱 Responsive Media Queries */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero h3 {
+        font-size: 1.2rem;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 30px 10px;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero h3 {
+        font-size: 1rem;
+      }
+
+      nav ul {
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="Images/book_logo.jpg" class="logo" alt="Library Logo">
+        <h2 class="library-name">E-Library</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="genre.html">Genres</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="author.html">Authors</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="logout-btn">Logout</a></li>
+        </ul>
+        <form>
+          <input type="search" placeholder="Search Books...">
+          <button type="submit">Search</button>
+        </form>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero">
+    <h1>Welcome to E-Library</h1>
+    <h3>Explore the World of Knowledge !!</h3>
+    <p>Discover a vast collection of books at your fingertips.</p>
+
+    <div class="quotes-container">
+      <blockquote>
+        <h3>"Tell me and I forget. Teach me and I remember. Involve me and I learn."</h3>
+        <cite>- Benjamin Franklin</cite>
+      </blockquote>
+      <blockquote>
+        <h3>"I have always imagined that paradise will be a kind of library."</h3>
+        <cite>- Jorge Luis Borges</cite>
+      </blockquote>
+      <blockquote>
+        <h3>"The library is a temple of learning."</h3>
+        <cite>- Unknown</cite>
+      </blockquote>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="quick-links">
+        <p>Quick Links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="genre.html">Genres</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="author.html">Authors</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="social-icons">
+        <h4>Follow us on</h4>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <p>&copy; 2025 All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
