@@ -1,0 +1,142 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="css/register.css">
+ <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+ <style>
+  h1{
+style="background-color:white;"
+   }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content:center;
+  align:center;
+}
+
+li {
+  display: inline;
+  justify-content:center;
+}
+</style>
+</form>
+<body>
+    <header>
+<div class="header-container">
+<div class="logo-container">
+<img src="Images/book_logo.jpg" class="logo">
+<h2 class"library-name">E-Library</h2>
+</div>
+        <nav>
+            <ul> 
+                <li><a href="index.html">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="about.html">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="genre.html">Genres</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="books.html">Popular Books</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="author.html">Authors</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="register.html">Register</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="login.html">Login</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="contact.html">Contact</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li><a href="login.html" class "logout-btn">Logout</a></li>    
+            </ul><br><br>
+<form style="display: inline-block; margin-left: 20px;">
+            <input type="search" placeholder="Search Books...">
+            <button type="reset">Search</button>
+        </nav
+</div>
+    </header>
+    <main>
+ <div class="main">
+ <h2>Login</h2>
+        <h3 style="color:blue;">Enter your login credentials</h3>
+
+        <form action="">
+            <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" 
+                placeholder="Enter your Username" required>
+
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter your Password" required><br><br>
+
+
+<label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="Admin">
+                    Admin
+                </option>
+                <option value="User">
+                    user
+                </option>
+            </select><br><br>
+
+            <div class="wrap">
+                <button type="submit" onclick="login( )">
+                    Submit
+                </button>
+
+
+        </form>
+        
+        <p>Not registered?
+            <a href="register.html" style="text-decoration: none;">
+                Create an account
+            </a>
+        </p>
+    </div>
+
+
+
+</main>
+ <footer>
+<div class="footer-container">
+<div class="quick-links">
+<p style="align:left;">Quick Links</p>
+<ul>
+ <li><a href="index.html">Home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+ <li><a href="about.html">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+ <li><a href="genre.html">Genres</a></li>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<li><a href="books.html">Popular Books</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+ <li><a href="issuebook.html">Issue Book</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+ <li><a href="author.html">Authors</a></li>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<li><a href="register.html">Register</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+ <li><a href="login.html">Login</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+<li><a href="contact.html">Contact</a></li>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+</ul>
+</div>
+<div class="social-icons">
+<h4>Follow us on</h4>
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" class="fa fa-twitter"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" class="fa fa-instagram"></a>
+<p>&copy; 2025   All rights reserved.</p>
+
+</div>
+</footer>
+<script>
+ function login() {
+            const first = document.getElementById('first').value;
+            const password = document.getElementById('password').value;
+            
+            if (first && password ) {
+                alert("Login Successfull");
+            } else {
+                alert("Please fill in both field");
+            }
+        }
+
+ </script>
+
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
